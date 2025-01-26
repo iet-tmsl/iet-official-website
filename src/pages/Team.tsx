@@ -11,9 +11,9 @@ const coreTeam = [
     instagram: "https://instagram.com/johnsmith",
     facebook: "https://facebook.com/johnsmith",
     achievements: [
-      "Led the chapter to win Best Student Chapter 2023",
-      "Organized 10+ successful technical events",
-      "Established industry partnerships"
+      "Published paper at the International Conference on Data Analytics and Insights (ICDAI 2024).",
+      "Got selected from IET Kolkata Local Network and repreesented them in IET Karamveer EXPO 2024",
+      // "Secured 1st Runner-Up position in the Tech-AI Hackathon"
     ]
   },
   {
@@ -24,9 +24,9 @@ const coreTeam = [
     instagram: "https://instagram.com/sarahjohnson",
     facebook: "https://facebook.com/sarahjohnson",
     achievements: [
-      "Managed technical workshop series",
-      "Coordinated with 20+ industry experts",
-      "Developed student mentorship program"
+      "Published paper at the International Conference on Data Analytics and Insights (ICDAI 2024).",
+      // "Secured 1st Runner-Up position in the Tech-AI Hackathon",
+      "Presented abstract in 7th Regional Science and Technology Congress 2025 at BCKV, Kalyani"
     ]
   },
   {
@@ -37,10 +37,10 @@ const coreTeam = [
     instagram: "https://instagram.com/michaelbrown",
     facebook: "https://facebook.com/michaelbrown",
     achievements: [
-      "Streamlined chapter communications",
-      "Increased member engagement by 50%",
-      "Launched monthly newsletter"
-    ]
+      "Got selected from IET Kolkata Local Network and repreesented them in IET Karamveer EXPO 2024",
+      // "Secured 1st Runner-Up position in the Tech-AI Hackathon",
+      "Presented abstract in 7th Regional Science and Technology Congress 2025 at Presidency University"
+ ]
   }
 ];
 
@@ -345,7 +345,7 @@ const Team = () => {
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-violet-900 mb-2">{member.name}</h3>
                     <p className="text-violet-600 mb-4">{member.position}</p>
-                    <div className="space-y-2 mb-4">
+                    {/* <div className="space-y-2 mb-4">
                       <div className="flex items-center text-gray-700">
                         <BookOpen className="w-4 h-4 mr-2 text-violet-500" />
                         <span className="text-sm">Specialization: {member.specialization}</span>
@@ -354,7 +354,7 @@ const Team = () => {
                         <Award className="w-4 h-4 mr-2 text-violet-500" />
                         <span className="text-sm">Project: {member.projects}</span>
                       </div>
-                    </div>
+                    </div> */}
                     {/* <motion.a
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}

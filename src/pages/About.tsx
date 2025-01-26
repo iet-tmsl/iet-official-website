@@ -119,9 +119,9 @@ const About = () => {
             >
               <div className="absolute inset-0 bg-gray-600 rounded-lg transform rotate-3"></div>
               <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
-                alt="IET Global"
-                className="relative rounded-lg shadow-xl transform -rotate-3 transition-transform hover:rotate-0 w-full h-64 object-cover"
+              src="assets/IET about.png"
+              alt="IET Global"
+              className="relative rounded-lg shadow-xl transform -rotate-3 transition-transform hover:rotate-0 w-full h-80 object-cover"
               />
             </motion.div>
           </motion.div>
@@ -144,9 +144,9 @@ const About = () => {
             >
               <div className="absolute inset-0 bg-gray-600 rounded-lg transform -rotate-3"></div>
               <img
-                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&q=80"
+                src="assets/tmsl.png"
                 alt="TMSL Chapter"
-                className="relative rounded-lg shadow-xl transform rotate-3 transition-transform hover:rotate-0 w-full h-64 object-cover"
+                className="relative rounded-lg shadow-xl transform rotate-3 transition-transform hover:rotate-0 w-full h-80 object-cover"
               />
             </motion.div>
             <div className="order-1 md:order-2">

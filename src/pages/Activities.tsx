@@ -42,7 +42,7 @@ const activities = [
   {
     icon: Wrench,
     title: "Hands-on Workshops",
-    description: "Practical workshops on emerging technologies like IoT, AI/ML, Cloud Computing, and more to enhance technical skills.",
+    description: "Practical workshops on emerging technologies like IoT, AI/ML, and more to enhance technical skills.",
     image: "assets/AI-ML workshop.jpg"
   }
 ];
@@ -82,7 +82,7 @@ const Activities = () => {
                 }`}
               >
                 <div className={index % 2 === 1 ? 'md:ltr' : ''}>
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-8">
                     <activity.icon className="text-gray-600 w-8 h-8" />
                     <h2 className="text-3xl font-bold gradient-text">{activity.title}</h2>
                   </div>
@@ -92,7 +92,7 @@ const Activities = () => {
                   <img
                     src={activity.image}
                     alt={activity.title}
-                    className="rounded-lg shadow-xl w-full h-64 object-cover"
+                    className="rounded-lg shadow-xl w-full h-70 object-cover"
                   />
                 </div>
               </motion.div>

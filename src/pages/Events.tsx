@@ -29,63 +29,63 @@ const pastEvents = [
     date: "January 1, 2024 to January 30,2024",
     location: "Noida, Uttar Pradesh",
     image: "assets/rockwell.png",
-    description: "Hands on trainning on PLC and SCADA."
+    description: "Hands on trainning on PLC and SCADA"
   },
   {
-    title: "Technical Paper Presentation",
+    title: "Paper Publication at ICDAI 2024",
     date: "July 25, 2024 to July 27, 2024",
     location: "Techno International, Newtown",
     image: "assets/icdai.jpg",
-    description: "Research paper presentation competition for undergraduate students."
+    description: "Research paper presentation competition for undergraduate students"
   },
   {
-    title: "Industry Expert Talk",
+    title: "Industry Expert's Talk",
     date: "May 11, 2024",
     location: "Techno Main SaltLake",
     image: "assets/tech talk.jpg",
-    description: "Interactive session with industry experts on emerging technologies."
+    description: "Interactive session with industry experts on emerging technologies"
   },
   {
-    title: "IET Karamveer EXPO-2024",
+    title: "IET Karamveer EXPO 2024",
     date: "May 4, 2024 to May 5, 2024",
     location: "Nasik, Maharastra",
     image: "assets/nasik_karamveer.png",
-    description: "21st National Level Working Model Competition using emerging technologies."
+    description: "21st National Level Working Model Competition using emerging technologies"
   },
   {
-    title: "Eccentron 2024",
+    title: "Eccentron 6.0",
     date: "April 26, 2024 to April 27, 2024",
     location: "Techno Main Saltlake",
     image: "assets/eccentron 2024.png",
-    description: ""
+    description: "A technical event organized by IET TMSL and EE department collaboratively"
   },
   {
     title: "WAVICLE 5.0",
     date: "May 4, 2024 to May 5, 2024",
     location: "Techno Main Saltlake",
     image: "assets/wavicle 5.png",
-    description: "21st National Level Working Model Competition using emerging technologies."
+    description: "An event was organized by the Department of EIE & ECS, TMSL, in association with the IET (UK) Kolkata Local Network"
   },
   {
     title: "Tech-Intellina 2024",
     date: "June 29, 2024",
     location: "Rajabazar Science College",
     image: "assets/tech intellina.png",
-    description: "21st National Level Working Model Competition using emerging technologies."
+    description: "Formerly knowm as Young Engineer's Competition, organised by the IET YPS Kolkata Local Network"
   },
   {
     title: "Tech AI Hackathon",
     date: "June 29, 2024",
     location: "Techno Main Saltlake",
     image: "assets/tech ai.png",
-    description: "21st National Level Working Model Competition using emerging technologies."
+    description: "An event was jointly organized by the Department of Computer Science & Engineering (AIML), Computer Science & Engineering (DS), and IET TMSL on campus student chapter"
   },
   {
-    title: "Industrial Automation Training",
+    title: "Industrial Automation Training, MSME(CTTC) Kolkata",
     date: "July 8, 2024 to July 25, 2024",
     location: "MSME Tool Room, Kolkata",
-    image: "assets/nasik_karamveer.png",
-    description: "21st National Level Working Model Competition using emerging technologies."
+    image: "assets/MSME tool room.png",
+    description: "Traiining on industry based automatic process specially Hybrid Control or Physical-Logical control system in the automation industries"
   }
 ];
 

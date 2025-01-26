@@ -17,7 +17,7 @@ const chapterAdviser = {
   ],
   specializations: [
     "IoT",
-    "Artificial Intelligence",
+    "Embedded Systems",
     // "Data Science"
   ],
   researchAreas: [

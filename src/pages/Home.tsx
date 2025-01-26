@@ -13,9 +13,13 @@ const impactData = [
 ];
 
 const slideImages = [
-  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
+  "assets/icdai.jpg",
+  "assets/tech ai.png",
+  "assets/Project presentaion competition.png",
+  "assets/Poster competition.png",
+  "assets/Rockwell internship.png",
+  "assets/wavicle 5.png",
+  "assets/AI-ML workshop.jpg"
 ];
 
 const features = [
@@ -194,7 +198,7 @@ const Home = () => {
             >
               <div className="absolute inset-0 bg-primary-600 dark:bg-primary-500 rounded-lg transform rotate-3"></div>
               <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
+                src="assets/Home page logo.jpg"
                 alt="Chapter History"
                 className="relative rounded-lg shadow-xl transform -rotate-3 transition-transform hover:rotate-0"
               />
