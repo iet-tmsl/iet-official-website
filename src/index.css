@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-500 dark:from-primary-400 dark:to-secondary-400;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+      dark:shadow-dark-400/50;
+  }
+
+  .nav-link {
+    @apply relative transition-colors duration-200;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-[-4px] w-0 h-[2px] 
+      bg-primary-100 dark:bg-primary-300 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(90deg, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,0.2) 50%, 
+      rgba(255,255,255,0) 100%
+    );
+    background-size: 1000px 100%;
+    @apply animate-shimmer;
+  }
+
+  .floating-element {
+    @apply animate-float;
+  }
+
+  .scale-in {
+    @apply animate-scaleIn;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-500 dark:to-primary-600
+      text-white px-6 py-3 rounded-lg shadow-lg 
+      hover:shadow-primary-500/25 dark:hover:shadow-primary-400/25
+      transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-600 dark:from-secondary-400 dark:to-secondary-500
+      text-white px-6 py-3 rounded-lg shadow-lg 
+      hover:shadow-secondary-500/25 dark:hover:shadow-secondary-400/25
+      transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-light-100 dark:bg-dark-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 dark:bg-primary-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500 dark:bg-primary-700;
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300
+    bg-white dark:bg-dark-200 shadow-lg dark:shadow-dark-400/50;
+}
+
+.hover-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r 
+    from-primary-600/20 to-secondary-500/20 
+    dark:from-primary-400/20 dark:to-secondary-400/20 
+    opacity-0 transition-opacity duration-300;
+}
+
+.hover-card:hover::before {
+  @apply opacity-100;
+}
+
+/* Text gradient animation */
+.animated-gradient-text {
+  background: linear-gradient(
+    to right,
+    theme('colors.primary.600'),
+    theme('colors.secondary.500'),
+    theme('colors.primary.600')
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 3s linear infinite;
+}
+
+.dark .animated-gradient-text {
+  background: linear-gradient(
+    to right,
+    theme('colors.primary.400'),
+    theme('colors.secondary.400'),
+    theme('colors.primary.400')
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}
