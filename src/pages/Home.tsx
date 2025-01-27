@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { ArrowRight, Award, Users, BookOpen, Rocket } from 'lucide-react';
+import Particles from 'react-tsparticles';
 
 const impactData = [
-  { year: '2018', students: 150, activities: 10 },
-  { year: '2019', students: 200, activities: 15 },
-  { year: '2020', students: 180, activities: 8 },
-  { year: '2021', students: 170, activities: 7 },
-  { year: '2022', students: 250, activities: 20 },
-  { year: '2023', students: 300, activities: 25 },
+  { year: '2018', students: 40, activities: 7 },
+  { year: '2019', students: 50, activities: 10 },
+  { year: '2020', students: 45, activities: 5 },
+  { year: '2021', students: 40, activities: 4 },
+  { year: '2022', students: 55, activities: 9 },
+  { year: '2023', students: 64, activities: 12 },
+  { year: '2024', students: 72, activities: 15 },
 ];
 
 const slideImages = [
@@ -80,12 +82,31 @@ const Home = () => {
   };
 
   return (
-    <div className="pt-16">
-      {/* Hero Section with Parallax Effect */}
+    <div className="pt-16 bg-gray-100">
+      {/* Hero Section with Enhanced Background */}
       <motion.div 
         style={{ opacity, scale }}
         className="relative h-[90vh] overflow-hidden"
       >
+        {/* Animated Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-50 animate-gradient"></div>
+        
+        {/* Particle Effects */}
+        <Particles
+          className="absolute inset-0"
+          options={{
+            particles: {
+              number: { value: 50 },
+              size: { value: 3 },
+              move: { enable: true, speed: 1 },
+              opacity: { value: 0.5 },
+            },
+            interactivity: {
+              events: { onhover: { enable: true, mode: "repulse" } },
+            },
+          }}
+        />
+
         {slideImages.map((image, index) => (
           <motion.div
             key={index}
@@ -139,8 +160,8 @@ const Home = () => {
       </motion.div>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 md:px-8 bg-light-200 dark:bg-dark-200">
-        <div className="max-w-7xl mx-auto">
+      <section id="features" className="py-20 px-4 md:px-8 bg-gray-100">
+        <div className="max-w-7xl mx-auto ">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -166,7 +187,7 @@ const Home = () => {
       </section>
 
       {/* Chapter History */}
-      <section className="py-20 px-4 md:px-8 bg-white dark:bg-dark-300">
+      <section className="py-20 px-4 md:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -192,15 +213,17 @@ const Home = () => {
               </motion.div>
             </div>
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
+              // initial={{ scale: 0.8, opacity: 0 }}
+              // animate={{ scale: 1, opacity: 1 }}
+              // transition={{ type: "spring", stiffness: 100, duration: 1 }}
+              // whileHover={{ rotate: 10 }}
+              // className="relative"
             >
-              <div className="absolute inset-0 bg-primary-600 dark:bg-primary-500 rounded-lg transform rotate-3"></div>
+              {/* <div className="absolute inset-0 bg-primary-600 dark:bg-primary-500 rounded-lg transform rotate-3"></div> */}
               <img
-                src="assets/Home page logo.jpg"
+                src="assets/WhatsApp_Image_2025-01-25_at_17.19.55_01ba4461-removebg-preview.png"
                 alt="Chapter History"
-                className="relative rounded-lg shadow-xl transform -rotate-3 transition-transform hover:rotate-0"
+                // className="relative rounded-lg shadow-xl transform -rotate-3 transition-transform hover:rotate-0"
               />
             </motion.div>
           </motion.div>
@@ -208,7 +231,7 @@ const Home = () => {
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 px-4 md:px-8 bg-gradient-to-br from-primary-600 to-primary-800 dark:from-primary-700 dark:to-primary-900">
+      <section className="py-20 px-4 md:px-8 bg-gradient-to-br from-primary-600 to-primary-800 dark:from-primary-700 dark:to-primary-900 ">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

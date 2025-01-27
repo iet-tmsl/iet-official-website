@@ -1,53 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Presentation as PresentationScreen, Factory, Users, Lightbulb, Award, Wrench } from 'lucide-react';
+import {
+  Presentation as PresentationScreen,
+  Factory,
+  Users,
+  Lightbulb,
+  Award,
+  Wrench,
+  ScrollText, Calendar
+} from 'lucide-react';
 
-const activities = [
+// Define the structure of an activity
+interface Activity {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+  image: string;
+  date: string; // Added date property
+}
+
+// Limited to four activities for a clean and focused display
+const activities: Activity[] = [
   {
     icon: Factory,
-    title: "Industrial Internship Opportunity",
-    description: "Exposure to the real world experience, to gain insights and knowledge of industries and their work culture.",
-    image: "assets/Rockwell internship.png"
+    title: 'Industrial Training, Rockwell Automation',
+    description:'Gained real-world experience and insights into industry practices and work culture through industrial internship at Rockwell Automation, Noida, UP.',
+    image: 'assets/Rockwell internship.png',
+    date: "January 1, 2024 to January 30,2024", 
   },
   {
-    icon: PresentationScreen,
-    title: "Student Poster Competition",
-    description: "Poster presentation competition where students showcase their innovative ideas and research work in various engineering domains.",
-    image: "assets/Poster competition.png"
-  },
-  {
-    icon: Factory,
-    title: "Paper Publication",
-    description: "Allows students to showcase their research skills, contribute to their field of study, and gain recognition for their work.",
-    image: "assets/paper publication.png"
-  },
-  {
-    icon: Factory,
-    title: "Industrial Visits",
-    description: "Visits to leading industries and manufacturing units to provide students with practical exposure to industrial processes and technologies.",
-    image: "assets/CESC industrial visit.png"
+    icon: ScrollText,
+    title: 'Paper Publication in ICDAI 2024',
+    description:'Technical research paper published in International Conference on Data Analytics and Insights 2024 (Formerly known as ICDAI 2024), organized by Techno International New Town.',
+    image: 'assets/icdai.jpg',
+    date: "July 25, 2024 to July 27, 2024",
   },
   {
     icon: Users,
-    title: "Tech Talks",
-    description: "Interactive sessions with industry experts and professionals sharing insights about latest technological trends and career opportunities.",
-    image: "assets/tech talk.jpg"
-  },
-  {
-    icon: Lightbulb,
-    title: "Project Presentation Competition",
-    description: "Platform for students to present their innovative projects and receive feedback from industry experts and academicians.",
-    image: "assets/Project presentaion competition.png"
+    title: 'Future Tech Congress 2024',
+    description:'Engage with industry experts and professionals as they share insights on the latest technological trends and career opportunities, organised by IET India.',
+    image: 'assets/FTC.jpg',
+    date: "September 2, 2024",
   },
   {
     icon: Wrench,
-    title: "Hands-on Workshops",
-    description: "Practical workshops on emerging technologies like IoT, AI/ML, and more to enhance technical skills.",
-    image: "assets/AI-ML workshop.jpg"
-  }
+    title: 'IET KARMAVEER EXPO 2024',
+    description:'21st National Level Working Model Competition, organized by K K Wagh Institute of Engineering Education & Research jointly with IET (U.K) Nashik Local Network during April 5-6, 2024.',
+    image: 'assets/nasik_karamveer.png',
+    date: "May 4, 2024 to May 5, 2024",
+  },
 ];
 
-const Activities = () => {
+const Activities: React.FC = () => {
   return (
     <div className="pt-8">
       {/* Hero Section */}
@@ -59,7 +63,9 @@ const Activities = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animated-gradient-text">Our Activities</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animated-gradient-text">
+              Our Activities
+            </h1>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Engaging students through diverse technical activities and hands-on learning experiences
             </p>
@@ -70,31 +76,42 @@ const Activities = () => {
       {/* Activities List */}
       <section className="py-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="space-y-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {activities.map((activity, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className={`grid md:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'md:rtl' : ''
-                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg"
               >
-                <div className={index % 2 === 1 ? 'md:ltr' : ''}>
-                  <div className="flex items-center gap-4 mb-8">
-                    <activity.icon className="text-gray-600 w-8 h-8" />
-                    <h2 className="text-3xl font-bold gradient-text">{activity.title}</h2>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed text-justify">{activity.description}</p>
-                </div>
-                <div>
-                  <img
-                    src={activity.image}
-                    alt={activity.title}
-                    className="rounded-lg shadow-xl w-full h-70 object-cover"
-                  />
-                </div>
+                {/* Enforce 16:9 Aspect Ratio for Activity Image */}
+<div className="aspect-w-16 aspect-h-9">
+  <img
+    src={activity.image}
+    alt={activity.title}
+    className="w-full h-40 object-cover" // Changed from h-40 to h-full for better responsiveness
+  />
+</div>
+
+{/* Activity Details */}
+<div className="p-4 flex flex-col justify-between h-30">
+  <div>
+    <div className="flex items-center mb-2">
+      <activity.icon className="text-blue-600 w-8 h-8 mr-2" />
+      <h3 className="text-lg font-semibold">{activity.title}</h3>
+    </div>
+    <p className="text-gray-700 text-sm text-justify">{activity.description}</p>
+  </div>
+  
+  {/* Date Section at Bottom with Blue Calendar Icon */}
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="mt-4 flex items-center text-blue-500 hover:text-blue-700 transition-colors duration-300"
+  >
+    <Calendar className="w-4 h-4 mr-2 " /> {/* Ensures the Calendar icon is blue */}
+    <span className="text-sm">{activity.date}</span>
+  </motion.div>
+</div>
               </motion.div>
             ))}
           </div>
@@ -102,7 +119,7 @@ const Activities = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 md:px-8 bg-gray-50">
+      <section className="py-20 px-4 md:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

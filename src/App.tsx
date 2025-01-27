@@ -5,11 +5,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Activities from './pages/Activities';
 import Events from './pages/Events';
-import Gallery from './pages/Gallery';
+import Achievements from './pages/Achievements';
 import Faculty from './pages/Faculty';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={`min-h-screen transition-colors duration-300
         ${darkMode ? 'dark bg-dark-300' : 'bg-gradient-to-br from-light-200 to-light-300'}`}>
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -46,7 +48,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/achievements" element={<Achievements />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />

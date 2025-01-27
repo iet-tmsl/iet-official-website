@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Award, BookOpen, Users, Rocket, ArrowRight, Newspaper, Trophy } from 'lucide-react';
+import { Award, BookOpen, Users, Rocket, ArrowRight, Newspaper, Trophy, Eye, Lightbulb, Medal, Star } from 'lucide-react';
 
 const About = () => {
   const { scrollYProgress } = useScroll();
@@ -29,20 +29,20 @@ const About = () => {
 
   const achievements = [
     {
-      title: "Paper Publication",
-      description: "Saikat Sarkar (EIE) and Neeladri Hazra (EIE), authored the paper at the International Conference on Data Analytics and Insights (ICDAI 2024).",
-      icon: Newspaper
+      title: "Vision",
+      description: "To empower future engineers to drive innovation, collaboration, and sustainable advancements for a better world.",
+      icon: Lightbulb
     },
     {
-      title: "Innovation Award",
-      description: "Secured 1st Runner-Up position in Tech-Intellina 2024, organized by the IET YPS Kolkata Local Network",
-      icon: Trophy
+      title: "Mission",
+      description: "To inspire learning, foster innovation, and connect students with industry to bridge the gap between academia and real-world engineering challenges.",
+      icon: Rocket
     },
-    {
-      title: "Community Impact",
-      description: "Successfully conducted 50+ technical workshops and events",
-      icon: Users
-    }
+    // {
+    //   title: "Community Impact",
+    //   description: "Successfully conducted 50+ technical workshops and events",
+    //   icon: Users
+    // }
   ];
 
   return (
@@ -50,7 +50,7 @@ const About = () => {
       {/* Hero Section */}
       <motion.div 
         style={{ scale }}
-        className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16"
+        className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 bg-gray-100"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -157,7 +157,7 @@ const About = () => {
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed text-justify">
                 The IET TMSL Student Chapter is a vibrant community of aspiring engineers and
-                  technologists at Techno Main Salt Lake. Our chapter serves as a platform for
+                  technologists, started at 2013 at Techno Main Salt Lake. Our chapter serves as a platform for
                   students to develop their technical skills, leadership abilities, and professional
                   network.
                 </p>
@@ -196,11 +196,11 @@ const About = () => {
           >
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
-                <Award className="text-white-700 w-12 h-12 mb-4" />
-                <h2 className="text-3xl font-bold animated-gradient-text">Our Achievements</h2>
+                <img src="assets/vision and mission.png" alt="Vision and Mission" className="w-24 h-24 mb-4" />
+                <h2 className="text-3xl font-bold animated-gradient-text ">Vision & Mission</h2>
               </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {achievements.map((achievement, index) => (
                 <motion.div
                   key={index}

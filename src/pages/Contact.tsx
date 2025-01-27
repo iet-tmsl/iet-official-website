@@ -161,7 +161,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+91 90073 92125</p>
+                      <p className="text-gray-600">+91 89101 19694</p>
                     </div>
                   </motion.div>
                 </div>
@@ -171,7 +171,7 @@ const Contact = () => {
               <motion.div variants={itemVariants} className="mt-12">
                 <h3 className="text-xl font-semibold text-violet-900 mb-4">Quick Links</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {['About', 'Events', 'Team'].map((link, index) => (
+                  {['About', 'Events', 'Team', 'Achievements'].map((link, index) => (
                     <motion.a
                       key={index}
                       href={`/${link.toLowerCase()}`}
@@ -370,7 +370,7 @@ const Contact = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="TMSL Location"
+              title="IET TMSL Location"
             ></iframe>
           </motion.div>
         </div>

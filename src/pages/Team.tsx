@@ -222,7 +222,7 @@ const Team = () => {
       </motion.div>
 
       {/* Core Team */}
-      <section className="py-20 px-4 md:px-8">
+      <section className="py-20 px-4 md:px-8 bg-grey-700">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={containerVariants}
@@ -312,7 +312,7 @@ const Team = () => {
       </section>
 
       {/* Team Members */}
-      <section className="py-20 px-4 md:px-8 bg-violet-50">
+      <section className="py-20 px-4 md:px-8 bg-grey-700">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={containerVariants}

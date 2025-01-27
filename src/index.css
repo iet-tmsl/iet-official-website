@@ -28,7 +28,7 @@
 
   .nav-link::after {
     @apply content-[''] absolute left-0 bottom-[-4px] w-0 h-[2px] 
-      bg-primary-100 dark:bg-primary-300 transition-all duration-300;
+      bg-[#00008B] transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -66,6 +66,19 @@
       hover:shadow-secondary-500/25 dark:hover:shadow-secondary-400/25
       transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
   }
+}
+
+/* Floating Navbar Styles */
+.navbar {
+  @apply max-w-7xl mx-auto rounded-lg;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
+  background-color: #E2EFF8;
+}
+
+.navbar:hover {
+  background-color: rgba(226, 239, 248, 0.9);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 12px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
 
 /* Smooth scrolling for anchor links */

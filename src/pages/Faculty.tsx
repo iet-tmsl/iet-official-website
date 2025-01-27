@@ -3,13 +3,13 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { GraduationCap, Mail, Linkedin, BookOpen, Award, Users, ArrowRight, Building, Star } from 'lucide-react';
 
 const chapterAdviser = {
-  name: "Asst. Prof. Subhajit Bhowmick",
+  name: "Mr. Subhajit Bhowmick",
   position: "Chapter Adviser",
   department: "Electronics & Instrumentation Engineering",
   image: "assets/Faculty/subhajit sir.png",
   email: "subhajitsan@yahoo.co.in",
   // linkedin: "https://linkedin.com/in/johndoe",
-  bio: "Dr. Subhajit Bhowmick has been leading the IET TMSL Student Chapter since its inception. With over 10 years of experience in academia and industry, he brings valuable insights and guidance to our chapter.",
+  bio: "Mr. Subhajit Bhowmick, with over 16 years of extensive experience in academia and industry, has been instrumental in establishing and leading the IET TMSL Student Chapter since its inception. He currently serves as an EC Member of the IET Kolkata Local Network and has previously held prestigious positions as the Young Professionals (YP) Chairman and Secretary, demonstrating his commitment to fostering innovation and leadership within the engineering community.",
   achievements: [
     "Published many research papers in prestigious journals",
     // "Awarded Best Professor of the Year 2023",
@@ -29,7 +29,7 @@ const chapterAdviser = {
 
 const facultyMembers = [
   {
-    name: "Dr. Sanghamitra Manna",
+    name: "Mrs. Sanghamitra Manna",
     position: "Assistant Professor",
     department: "Electronics & Instrumentation Engineering",
     image: "assets/Faculty/Sanghamitra Manna.jpg",
@@ -42,7 +42,7 @@ const facultyMembers = [
     // featured: true
   },
   {
-    name: "Soumyadip Jana",
+    name: "Mr. Soumyadip Jana",
     position: "Assistant Professor",
     department: "Electrical Engineering",
     image: "assets/Faculty/Soumyadip Jana.jpg",
@@ -55,7 +55,7 @@ const facultyMembers = [
     // featured: false
   },
   {
-    name: "Bidishna Bhattacharya",
+    name: "Mrs. Bidishna Bhattacharya",
     position: "Head of the Department & Assistant Professor",
     department: "Electrical Engineering",
     image: "assets/Faculty/Bidishna Bhattacharya.JPG",
@@ -68,7 +68,7 @@ const facultyMembers = [
     // featured:
   },
   {
-    name: "Tuktuki Rakshit Ghosh ",
+    name: "Mrs. Tuktuki Rakshit Ghosh ",
     position: "Assistant Professor",
     department: "Electronics and Communication Engineering",
     image: "assets/Faculty/tuktuki rakshit ghosh.jpg",
@@ -79,7 +79,72 @@ const facultyMembers = [
     // publications: ,
     // experience: "15+ years",
     // featured:
-  }
+  },
+  {
+    name: "Mrs. Moumita Jana ",
+    position: "Assistant Professor",
+    department: "Electronics and Communication Engineering",
+    image: "assets/blank pic.png",
+    // email: "",
+    // linkedin: "",
+    // specialization: "",
+    // research: "",
+    // publications: ,
+    // experience: "15+ years",
+    // featured:
+  },
+  {
+    name: "Dr. Pranati Dutta",
+    position: "Assistant Professor",
+    department: "Electronics and Instrumentation Engineering",
+    image: "assets/blank pic.png",
+    // email: "",
+    // linkedin: "",
+    // specialization: "",
+    // research: "",
+    // publications: ,
+    // experience: "15+ years",
+    // featured:
+  },
+  {
+    name: "Mr. Abhjit Dey ",
+    position: "Assistant Professor",
+    department: "Electronics and Communication Engineering",
+    image: "assets/blank pic.png",
+    // email: "",
+    // linkedin: "",
+    // specialization: "",
+    // research: "",
+    // publications: ,
+    // experience: "15+ years",
+    // featured:
+  },
+  {
+    name: "Mr. Jayanta Kundu",
+    position: "Senior Technical Head",
+    department: "Electronics and Communication Engineering",
+    image: "assets/blank pic.png",
+    // email: "",
+    // linkedin: "",
+    // specialization: "",
+    // research: "",
+    // publications: ,
+    // experience: "15+ years",
+    // featured:
+  },
+  {
+    name: "Mr. Arnab Karmakar",
+    position: "Senior Technical Head",
+    department: "Electronics and Instrumentation Engineering",
+    image: "assets/blank pic.png",
+    // email: "",
+    // linkedin: "",
+    // specialization: "",
+    // research: "",
+    // publications: ,
+    // experience: "15+ years",
+    // featured:
+  },
 ];
 
 const Faculty = () => {
@@ -154,7 +219,7 @@ const Faculty = () => {
       </motion.div>
 
       {/* Chapter Adviser */}
-      <section className="py-20 px-4 md:px-8">
+      <section className="py-20 px-4 md:px-8 bg-grey-700">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
