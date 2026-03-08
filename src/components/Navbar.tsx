@@ -89,7 +89,7 @@ return (
 
         {/* Right Logo */}
         <div className="hidden md:flex items-center space-x-2">
-          <img src="techno logo.png" alt="Techno Logo" className="h-14 w-auto" />
+          <img src="/techno logo.png" alt="Techno Logo" className="h-14 w-auto" />
         </div>
 
         {/* Mobile Navigation Button */}
